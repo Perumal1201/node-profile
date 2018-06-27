@@ -1,6 +1,9 @@
 var express = require('express');
 var app = express();
 
+app.set('view engine', 'pug');
+app.set('views','./views');
+
 var register = require('./routes/register.js');
 var search = require('./routes/search.js');
 
