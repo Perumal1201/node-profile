@@ -5,7 +5,7 @@ app.get('/', function(req, res){
     res.send('This is home page');
 });
 
-app.get('/register', function(req, res){
+app.get('/adduser', function(req, res){
     res.send('This is Register page');
 });
 
