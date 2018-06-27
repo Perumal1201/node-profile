@@ -1,11 +1,20 @@
 var express = require('express');
+var bodyParser = require('body-parser');
+var multer = require('multer');
+var upload = multer();
 var app = express();
 
 app.set('view engine', 'pug');
 app.set('views','./views');
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/profile');
+
 var register = require('./routes/register.js');
 var search = require('./routes/search.js');
+
+// for parsing application/json
+app.use(bodyParser.json()); 
 
 app.set('view engine', 'pug');
 app.set('views', './views');
