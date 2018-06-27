@@ -4,6 +4,9 @@ var app = express();
 var register = require('./routes/register.js');
 var search = require('./routes/search.js');
 
+app.set('view engine', 'pug');
+app.set('views', './views');
+
 app.get('/', function(req, res){
     res.send('This is home page');
 });
