@@ -1,0 +1,10 @@
+html   
+html
+    head    
+        title Search Result
+    body
+        h1 #{message}
+        ul
+            each val in resultSet
+                li #{val.regno} #{val.name} #{val.age}
+        a(href="/search") Back

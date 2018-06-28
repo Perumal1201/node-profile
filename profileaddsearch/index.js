@@ -13,8 +13,9 @@ mongoose.connect('mongodb://localhost/profile');
 var register = require('./routes/register.js');
 var search = require('./routes/search.js');
 
-// for parsing application/json
 app.use(bodyParser.json()); 
+
+app.use(bodyParser.urlencoded({ extended: true })); 
 
 app.set('view engine', 'pug');
 app.set('views', './views');
